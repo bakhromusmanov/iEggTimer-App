@@ -1,19 +1,47 @@
-//
-//  ViewController.swift
-//  iEggTimer
-//
-//  Created by MacBook Air on 03/07/24.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    let eggTimes : [String : Int] = ["Soft": 300, "Medium" : 420, "Hard" : 720]
+    var timer : Timer?
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var progressBar: UIProgressView!
+    
+    var timePassed : Int = 0
+    var timeTotal : Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
-
+    
+    
+    @IBAction func hardnessSelected(_ sender: UIButton) {
+        
+        timer?.invalidate()
+        timePassed = 0
+        progressBar.progress = 0.0
+        
+        let hardness = sender.currentTitle
+        timeTotal = eggTimes[hardness!]!
+        startTimer()
+    }
+    
+    func startTimer(){
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateTimer(){
+        if timePassed < timeTotal {
+            progressBar.progress = Float(timePassed)/Float(timeTotal)
+            timePassed += 1
+            titleLabel.text = "Time remained: \(timeTotal-timePassed) seconds"
+        } else {
+            timer?.invalidate()
+            titleLabel.text = "Time is up!"
+        }
+    }
 
 }
 
