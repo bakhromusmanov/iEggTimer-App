@@ -13,6 +13,7 @@
 		D064CE512C351F0600A30942 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D064CE502C351F0600A30942 /* Base */; };
 		D064CE532C351F0700A30942 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D064CE522C351F0700A30942 /* Assets.xcassets */; };
 		D064CE562C351F0700A30942 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D064CE552C351F0700A30942 /* Base */; };
+		D09AACDD2C378C4C00924A2E /* alarm_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D09AACDC2C378C4C00924A2E /* alarm_sound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D064CE522C351F0700A30942 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D064CE552C351F0700A30942 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D064CE572C351F0700A30942 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D09AACDC2C378C4C00924A2E /* alarm_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_sound.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +43,7 @@
 			isa = PBXGroup;
 			children = (
 				D064CE482C351F0600A30942 /* iEggTimer */,
+				D09AACDC2C378C4C00924A2E /* alarm_sound.mp3 */,
 				D064CE472C351F0600A30942 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -127,6 +130,7 @@
 			files = (
 				D064CE532C351F0700A30942 /* Assets.xcassets in Resources */,
 				D064CE562C351F0700A30942 /* Base in Resources */,
+				D09AACDD2C378C4C00924A2E /* alarm_sound.mp3 in Resources */,
 				D064CE512C351F0600A30942 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

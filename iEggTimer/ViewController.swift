@@ -1,7 +1,8 @@
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
-    
+    var player : AVAudioPlayer!
     let eggTimes : [String : Int] = ["Soft": 300, "Medium" : 420, "Hard" : 720]
     var timer : Timer?
     
@@ -34,14 +35,21 @@ class ViewController: UIViewController {
     
     @objc func updateTimer(){
         if timePassed < timeTotal {
-            progressBar.progress = Float(timePassed)/Float(timeTotal)
             timePassed += 1
+            progressBar.progress = Float(timePassed)/Float(timeTotal)
             titleLabel.text = "Time remained: \(timeTotal-timePassed) seconds"
         } else {
+            playSound()
             timer?.invalidate()
             titleLabel.text = "Time is up!"
         }
     }
+    
+    func playSound() {
+            let url = Bundle.main.url(forResource: "alarm_sound", withExtension: "mp3")
+            player = try! AVAudioPlayer(contentsOf: url!)
+            player.play()
+            }
 
 }
 
