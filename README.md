@@ -9,7 +9,7 @@ Welcome to **Egg Timer**, the perfect app for boiling eggs to perfection. With c
 
 ### 1. **Boiling Timers**:
    - Predefined timers for soft, medium, and hard-boiled eggs:
-     - **Soft-boiled**: 5 seconds (for demo purposes).
+     - **Soft-boiled**: 5 minutes.
      - **Medium-boiled**: 7 minutes.
      - **Hard-boiled**: 12 minutes.
 
